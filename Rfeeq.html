@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Register Page</title>
+  <link rel="stylesheet" type="text/css" href="RfeeqColors.css">
+</head>
+
+
+
+<body>
+  <div class="container">
+    <h1>رفیق</h1>
+    <h2>تسجيل</h2>
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="username">اسم المستخدم</label>
+        <input type="text" class="form-control" id="username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="password">كلمة المرور</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">تأكيد كلمة المرور</label>
+        <input type="password" class="form-control" id="confirm-password" name="confirm-password">
+      </div>
+      <button type="submit" class="btn btn-primary">تسجيل</button>
+    </form>
+  </div>
+
+  <script>
+    // Validate the form before submitting
+function validateForm() {
+  // Check if the username is empty
+  if (document.getElementById("username").value === "") {
+    alert("الرجاء إدخال اسم مستخدم.");
+    return false;
+  }
+
+  // Check if the email is valid
+  if (!/^\w+@\w+\.\w+$/.test(document.getElementById("email").value)) {
+    alert("الرجاء إدخال عنوان بريد إلكتروني صالح.");
+    return false;
+  }
+
+  // Check if the passwords match
+  if (document.getElementById("password").value !== document.getElementById("confirm-password").value) {
+    alert("كلمة المرور غير متطابقة.");
+    return false;
+  }
+
+  return true;
+}
+
+// Submit the form when the user clicks on the "Register" button
+document.getElementById("submit").onclick = function() {
+  if (validateForm()) {
+    // Do something with the form data
+  }
+};
+
+  </script>
+  
+</body>
+
+
+
+
+
+<body>
+  <!-- Base Background -->
+  <div class="BaseBackground">
+    <div >
+      <!-- Background img -->
+      <img class ="background-image" src="https://via.placeholder.com/390x844" />
+      <div style=""></div>
+    </div>
+    <div id="Register-Background" >
+      <div class="Register-Text" >Register</div>
+      <div class="Register-Boxes">
+        <!-- Form UserName -->
+        <div class= "Register-Forms_Frame">
+          <div Class="Register-Forms-Text"></div>
+          <div Class="Register-Froms-input" >Username</div>
+        </div>
+        <!-- Form E-Mail -->
+        <div class= "Register-Forms_Frame">
+          <div Class="Register-Forms-Text"></div>
+          <div Class="Register-Froms-input">E-Mail</div>
+        </div>
+        <!-- Form Password -->
+        <div class= "Register-Forms_Frame">
+          <div Class="Register-Forms-Text"></div>
+          <div Class="Register-Froms-input">Password</div>
+        </div>
+        <!-- Form Confirm Password -->
+        <div class= "Register-Forms_Frame">
+          <div Class="Register-Forms-Text"></div>
+          <div Class="Register-Froms-input">Confirm Password</div>
+        </div>
+      </div>
+      <!-- Register Button -->
+      <div Class="Register-Button">
+        <div Class="Register-Button-Text">Register</div>
+      </div>
+    </div>
+    <!-- Google Signup Button -->
+    <div id="Google-Button-Base">
+      <div Class="Google-Button-Background"></div>
+      <div Class="Google-Button-Text"> Sign up with Google</div>
+      <div Class="Google-Button-Icon"> <!--These Four lines under this line can be replaced by one pic for google -->
+        <div style="width: 11.40px; height: 11.17px; left: 11.86px; top: 9.68px; position: absolute; background: #4877BB"></div>
+        <div style="width: 18.44px; height: 9.53px; left: 1.27px; top: 14.20px; position: absolute; background: #21A849"></div>
+        <div style="width: 5.10px; height: 10.74px; left: 0px; top: 6.48px; position: absolute; background: #FBBA10"></div>
+        <div style="width: 18.55px; height: 9.53px; left: 1.25px; top: 0px; position: absolute; background: #E73830"></div>
+      </div>
+    </div>
+    <!-- Rfeeq Logo -->
+    <img Id="Rfeeq-Logo" src="https://via.placeholder.com/52x52" />
+    <!-- Main Rfeeq Text Under Logo -->
+    <div Class="Rfeeq-Text">رفيق</div>
+  </div>
+</body>
+</html>
